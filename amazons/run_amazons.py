@@ -12,6 +12,7 @@ BLACK_PLAYER = 'black'
 
 TIE = 'tie'
 
+
 class amazonsRunner:
     def __init__(self, setup_time, time_per_k_turns, k, printPref, white_player, black_player):
         """Game runner initialization.
@@ -39,7 +40,7 @@ class amazonsRunner:
         __import__(self.black_player)
         white_is_interactive = sys.modules[self.white_player].Player == players.interactive.Player
         black_is_interactive = sys.modules[self.black_player].Player == players.interactive.Player
-		
+
         self.remaining_times = [
             utils.INFINITY if white_is_interactive else self.time_per_k_turns,
             utils.INFINITY if black_is_interactive else self.time_per_k_turns,
@@ -54,7 +55,7 @@ class amazonsRunner:
         """
         try:
             player, measured_time = utils.run_with_limited_time(
-                player_class, (self.setup_time, player_color, self.time_per_k_turns, self.k), {}, self.setup_time*1.5)
+                player_class, (self.setup_time, player_color, self.time_per_k_turns, self.k), {}, self.setup_time * 1.5)
         except MemoryError:
             return True
 
@@ -92,7 +93,7 @@ class amazonsRunner:
                     winner = self.make_winner_result(0 if curr_player_idx == 1 else 1)
                     break
                 move, run_time = utils.run_with_limited_time(
-                    player.get_move, (copy.deepcopy(board_state), possible_moves), {}, remaining_run_time*1.5)
+                    player.get_move, (copy.deepcopy(board_state), possible_moves), {}, remaining_run_time * 1.5)
                 remaining_run_times[curr_player_idx] -= run_time
                 if remaining_run_times[curr_player_idx] < 0:
                     raise utils.ExceededTimeError
