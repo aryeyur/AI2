@@ -47,14 +47,12 @@ class SelectiveMiniMaxWithAlphaBetaPruning:
             next_state.doMove(next_move)
             return self.utility(next_state)
 
-        def key_by_arrow_queen_distance(next_move):
-            _, queen_loc, arrow_loc = next_move
-            x_dist = queen_loc[0] - arrow_loc[0]
-            y_dist = queen_loc[1] - arrow_loc[1]
-            return int(math.sqrt((x_dist ** 2) + (y_dist ** 2)))
+        next_moves.sort(key=utilize_next_state, reverse=True)
+        next_moves = next_moves[:int(self.w * len(next_moves))]
 
-        next_moves = sorted(next_moves, key=utilize_next_state)
-        next_moves = next_moves[int((1 - self.w) * len(next_moves)):]
+        if not next_moves:
+            # This player has no moves. So the previous player is the winner.
+            return INFINITY if state.currPlayer != self.my_color else -INFINITY, None
 
         if maximizing_player:
             selected_move = next_moves[0]
@@ -104,8 +102,8 @@ class Player(abstract.AbstractPlayer):
         # Choosing an arbitrary move:
         best_move = possible_moves[0]
 
-        minimax = SelectiveMiniMaxWithAlphaBetaPruning(self.utility, self.color, self.no_more_time, 0.01)
-        # TODO Arye currently the w is hoar-coded to be 0.5. should we change that?
+        minimax = SelectiveMiniMaxWithAlphaBetaPruning(self.utility, self.color, self.no_more_time, 0.5)
+        # TODO Arye currently the w is hard-coded. should we change that?
 
         # Iterative deepening until the time runs out.
         while True:
@@ -116,12 +114,6 @@ class Player(abstract.AbstractPlayer):
                 (alpha, move), run_time = run_with_limited_time(
                     minimax.search, (board_state, current_depth, -INFINITY, INFINITY, True), {},
                     self.time_for_current_move - (time.process_time() - self.clock))
-            except MemoryError: #TODO Arye remove these two exceptions
-                print('TO MUCH MEM!!!!')
-                break
-            except ExceededTimeError:
-                print ('TO MUCH TIME IN MY BATHROOM')
-                break
             except (ExceededTimeError, MemoryError):
                 print('no more time')
                 break
@@ -134,11 +126,11 @@ class Player(abstract.AbstractPlayer):
             best_move = move
 
             if alpha == INFINITY:
-                print('the move: {} will guarantee victory.'.format(best_move))
+                print('the move: {} will guarantee victory. {} will win'.format(best_move, self.color))
                 break
 
             if alpha == -INFINITY:
-                print('all is lost')
+                print('all is lost. {} will lose'.format(self.color))
                 break
 
             current_depth += 1
