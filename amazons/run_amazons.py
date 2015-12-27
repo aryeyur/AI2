@@ -33,7 +33,7 @@ class amazonsRunner:
         self.k = int(k)
         self.players = []
 
-        # Dynamically importing the players. This allows maximum flexibility and modularity.
+            # Dynamically importing the players. This allows maximum flexibility and modularity.
         self.white_player = 'players.{}'.format(white_player)
         self.black_player = 'players.{}'.format(black_player)
         __import__(self.white_player)
