@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
     <list default="true" id="ab9b9768-8e62-46f8-a17a-a22c71fcda45" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="ab9b9768-8e62-46f8-a17a-a22c71fcda45" name="Default" comment="" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
     <ignored path="AI2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +44,13 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/amazons/players/ImprovedPlayer/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
             <state vertical-scroll-proportion="0.50246304">
               <caret line="20" column="97" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
+=======
+            <state vertical-scroll-proportion="0.53263706">
+              <caret line="20" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
               <folding />
             </state>
           </provider>
@@ -422,7 +431,17 @@
       <option name="project" value="LOCAL" />
       <updated>1451245250255</updated>
     </task>
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
     <option name="localTasksCounter" value="2" />
+=======
+    <task id="LOCAL-00002" summary="saif 8 v3 (with time slice heuristic. final version)">
+      <created>1451321913623</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1451321913623</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
     <servers />
   </component>
   <component name="TodoView">
@@ -439,12 +458,16 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9705882" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2908497" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2908497" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25372022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1764706" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -473,7 +496,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="saif 8" />
     <MESSAGE value="saif 8 v2" />
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
     <option name="LAST_COMMIT_MESSAGE" value="saif 8 v2" />
+=======
+    <MESSAGE value="saif 8 v3 (with time slice heuristic. final version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="saif 8 v3 (with time slice heuristic. final version)" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -576,8 +604,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/amazons/players/ImprovedPlayer/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< c9089a3ebc6de023f71bea7cee10bbda95ea4922
         <state vertical-scroll-proportion="0.50246304">
           <caret line="20" column="97" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
+=======
+        <state vertical-scroll-proportion="0.53263706">
+          <caret line="20" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+>>>>>>> saif 8 v3 (with time slice heuristic. final version)
           <folding />
         </state>
       </provider>
