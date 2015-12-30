@@ -24,7 +24,7 @@ class Player(abstract.AbstractPlayer):
         self.clock = time.process_time()
         self.time_for_current_move = self.time_per_k_turns / (2 ** self.turns_remaining_in_round)
         if self.turns_remaining_in_round == 1:
-            self.time_for_current_move += 1/32 - 0.05
+            self.time_for_current_move += 1/32 - 0.5
         if len(possible_moves) == 1:
             return possible_moves[0]
 

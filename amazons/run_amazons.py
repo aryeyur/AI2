@@ -6,6 +6,7 @@ import amazons_board
 import utils
 import copy
 import players.interactive
+import globFile
 
 WHITE_PLAYER = 'white'
 BLACK_PLAYER = 'black'
@@ -120,6 +121,7 @@ class amazonsRunner:
     @staticmethod
     def end_game(winner):
         print('The winner is {}'.format(winner[0]))
+        # globFile.glob_file.write('winner: {}'.format(winner[0]))
 
     def make_winner_result(self, idx):
         if idx < 0:
