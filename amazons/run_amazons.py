@@ -121,7 +121,7 @@ class amazonsRunner:
     @staticmethod
     def end_game(winner):
         print('The winner is {}'.format(winner[0]))
-        # globFile.glob_file.write('winner: {}'.format(winner[0]))
+
 
     def make_winner_result(self, idx):
         if idx < 0:

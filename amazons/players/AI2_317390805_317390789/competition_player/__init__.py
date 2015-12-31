@@ -90,7 +90,7 @@ class Player(abstract.AbstractPlayer):
             10: 0.2,
             50: 0.7
         }
-        return time_per_k_turns_to_w[time_per_k_turns]
+        return time_per_k_turns_to_w.get(time_per_k_turns, 0.2)
 
     def __init__(self, setup_time, player_color, time_per_k_turns, k):
         abstract.AbstractPlayer.__init__(self, setup_time, player_color, time_per_k_turns, k)
@@ -101,14 +101,11 @@ class Player(abstract.AbstractPlayer):
         # Taking a spare time of 0.05 seconds.
         self.turns_remaining_in_round = self.k
         self.time_remaining_in_round = self.time_per_k_turns
-        self.time_for_current_move = self.time_per_k_turns / (2 ** self.turns_remaining_in_round)
+        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.05
 
     def get_move(self, board_state, possible_moves):
         self.clock = time.process_time()
-        self.time_for_current_move = self.time_per_k_turns / (2 ** self.turns_remaining_in_round) - 0.5
-        if self.turns_remaining_in_round == 1:
-            self.time_for_current_move += 1/32
-
+        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.05
         if len(possible_moves) == 1:
             return possible_moves[0]
 
@@ -181,9 +178,8 @@ class Player(abstract.AbstractPlayer):
         return (time.process_time() - self.clock) >= self.time_for_current_move
 
     def __repr__(self):
-        return '{} {}'.format(abstract.AbstractPlayer.__repr__(self), 'improved+selective')
+        return '{} {}'.format(abstract.AbstractPlayer.__repr__(self), 'selective')
 
 
 """ c:\python34\python run_amazons.py 3 3 3 y simple_player random_player
 """
-

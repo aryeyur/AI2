@@ -13,11 +13,11 @@ class Player(abstract.AbstractPlayer):
         # Taking a spare time of 0.05 seconds.
         self.turns_remaining_in_round = self.k
         self.time_remaining_in_round = self.time_per_k_turns
-        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.5 # 0.05
+        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.05
 
     def get_move(self, board_state, possible_moves):
         self.clock = time.process_time()
-        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.5 # 0.05
+        self.time_for_current_move = self.time_remaining_in_round / self.turns_remaining_in_round - 0.05
         if len(possible_moves) == 1:
             return possible_moves[0]
 
